@@ -34,7 +34,7 @@ function List(props){
   const listAddresses = props.listAddresses;
   const listItems = listAddresses.map((address,i) => 
       <Row key={i}>
-          <Col className="list-item" md={{ span: 6, offset: 3 }}><p>{address.address}</p><p>{address.address}</p></Col>
+          <Col className="list-item" md={{ span: 6, offset: 3 }}><p>{address.attributes.Place_addr}</p></Col>
       </Row>
   );
   return (

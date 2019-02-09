@@ -8,9 +8,10 @@ import 'react-bootstrap-typeahead/css/Typeahead.css';
 import { asyncContainer, Typeahead } from 'react-bootstrap-typeahead';
 import axios from 'axios';
 const API_SUGGESTIONS_URL = 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/suggest';
-const API_RESULTS_URL = 'http://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates';
+const API_RESULTS_URL = 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates';
 const LANGUAGE = 'bg';
 const CATEGORIES= 'POI,Address'
+const FIELDS ="Place_addr";
 const FORMAT = 'pjson'
 library.add(faSearch);
 
@@ -47,6 +48,7 @@ class SearchBar extends React.Component {
           countryCode: LANGUAGE,
           langCode: LANGUAGE,
           category: CATEGORIES,
+          outFields : FIELDS,
           f: FORMAT,
           SingleLine: this.state.query
         }

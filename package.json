@@ -2,6 +2,7 @@
   "name": "address-search-project",
   "version": "0.1.0",
   "private": true,
+  "homepage":"http://kolyopeychev.github.io/address-search",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.14",
     "@fortawesome/free-solid-svg-icons": "^5.7.1",
@@ -9,6 +10,7 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.2.1",
     "es6-promise": "^4.2.5",
+    "gh-pages": "^2.0.1",
     "jquery": "^3.3.1",
     "react": "^16.7.0",
     "react-ajax": "^0.1.1",
@@ -21,6 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy":"gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
