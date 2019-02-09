@@ -1,0 +1,14 @@
+.SearchBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.SearchBar .rbt-input-hint {
+    display: none;
+}
+.asynctypeahead-flex {
+    flex: 1 1 auto;
+    max-width: 500px;
+}
